@@ -1,0 +1,302 @@
+
+$smallFont: 14px;
+$mediumFont: 18px;
+
+$background:#1F2734;
+$white: #CED4DD;
+$grey: #3E4A5E;
+$orange: #E08E26;
+$blue: #3388FF;
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+
+
+button, textarea, input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  background: $background;
+}
+
+.App {
+  padding: 0 32px;
+  width: 512px;
+  height: 400px;
+  position: relative;
+  border: 1px solid #54637C;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 20px rgba(23, 25, 28, 0.3);
+  border-radius: 2px;
+  float: left;
+  left: 45px;
+  top: 133px;
+}
+
+#Form {
+  > form > {
+    label {
+      font-size: 14px;
+      line-height: 31px;
+      color: $white;
+      width: 100%;
+      text-align: left;
+      position: absolute;
+      right: 146px;
+      pointer-events: none;
+    }
+    div {
+      &:nth-child(3) > label, &:nth-child(4) > label {
+        font-size: 14px;
+        line-height: 31px;
+        color: $white;
+        width: 100%;
+        text-align: left;
+        position: absolute;
+        right: 146px;
+        pointer-events: none;
+      }
+      &:nth-child(5) > label {
+        position: absolute;
+        left: 84px;
+        top: 148px;
+        font-size: 14px;
+        line-height: 18px;
+        &:nth-child(3) {
+          left: 207px;
+          top: 148px;
+        }
+      }
+      &:nth-child(4) {
+        margin-bottom: 10px;
+        height: 19px;
+      }
+    }
+  }
+  input {
+    background: $grey;
+    border: 1px solid $grey;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 224px;
+    height: 32px;
+    margin-bottom: 24px;
+    &::placeholder {
+      color: $white;
+      padding: 7px;
+    }
+  }
+  button {
+    width: 74px;
+    height: 32px;
+    background: $blue;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    margin: 25px 0;
+    position: relative;
+  }
+  > .header {
+    color: $orange;
+    padding-top: 31px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.my-creatives {
+  > {
+    span {
+      color: $orange;
+      margin-right: 30px;
+    }
+    button {
+      width: 104px;
+      height: 32px;
+      background: $blue;
+      border-radius: 3px;
+      border: none;
+      color: white;
+    }
+  }
+  padding-top: 56px;
+  position: absolute;
+  top: -134px;
+  left: 16px;
+}
+
+.input-group {
+  display: inline-flex;
+  float: left;
+}
+
+.input__buttons {
+  width: 104px !important;
+  color: #9EAAB9;
+  margin-right: 16px;
+}
+
+.input__radio {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.input-group span {
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 10px;
+  color: $white;
+}
+
+input {
+  &#size-width, &#size-height {
+    width: 104px;
+  }
+  &[type="radio" i]:checked {
+    border: 1px solid $blue !important;
+    border-radius: 12px !important;
+    background: none !important;
+  }
+}
+
+.input--active {
+  color: $white;
+  background: $blue !important;
+}
+
+#Form > form {
+  width: 224px;
+  float: right;
+  margin-right: 40px;
+  position: relative;
+  margin-top: 120px;
+}
+
+hr {
+  border: 1px solid #54637C;
+  width: 448px;
+  position: absolute;
+  overflow: visible;
+  &.top-divider:after {
+    content: "General info";
+    position: absolute;
+    top: -23px;
+    left: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: $white;
+  }
+  &.bottom-divider {
+    bottom: 0;
+    margin-bottom: 88px;
+  }
+  &.top-divider {
+    margin-top: 104px;
+  }
+  &.body-divider {
+    top: 105px;
+    width: 100%;
+    margin: 0 45px;
+  }
+}
+
+.control {
+  float: right;
+}
+
+.is-cancel {
+  color: #FFD012 !important;
+  background: none !important;
+  position: absolute;
+  top: 317px;
+}
+
+.radio-toolbar {
+  margin-bottom: 24px;
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 104px !important;
+    height: 32px;
+    color: #9EAAB9;
+    background: $grey;
+    font-size: 14px;
+    line-height: 31px;
+    margin-right: 16px;
+    &:hover {
+      background: #2A2D33;
+    }
+  }
+  input {
+    &[type="radio" i] {
+      border: 1px solid $blue !important;
+      border-radius: 12px !important;
+      -webkit-appearance: none;
+      background: none !important;
+      &:checked {
+        border: 1px solid $blue !important;
+        border-radius: 12px !important;
+        -webkit-appearance: none;
+        background: none !important;
+      }
+    }
+    &[type="radio"]:checked + label {
+      background: $blue !important;
+      color: $white;
+    }
+  }
+}
+
+.print {
+  font-size: 14px;
+  line-height: 18px;
+  color: #E5E5E5;
+  text-align: left;
+}
+
+.is-left {
+  left: 144px;
+}
+
+.is-right {
+  left: 76px;
+}
+
+textarea:disabled {
+  background-color: #dddddd;
+}
+
+input[disabled], #Form > form > div:nth-child(5) > label {
+  opacity: .5 !important;
+  color: $white !important;
+  z-index: 2;
+}
+
+input {
+  &:focus {
+    padding-left: 10px !important;
+    color: white !important;
+  }
+  padding-left: 10px !important;
+  color: white !important;
+}
+  
